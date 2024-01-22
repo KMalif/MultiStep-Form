@@ -16,14 +16,21 @@ const Home = () => {
   const dispatch = useDispatch()
   const currentStep = useSelector((state) => state.homeReducer.step)
 
-  const stepHanlder = () => {
-    if (currentStep === 5) {
-      dispatch(setStep(1))
-    } else {
-      dispatch(setStep(currentStep + 1))
+  const stepDisplay = () => {
+    switch(currentStep){
+      case 0:
+        return <PersonalInfoStep/>
+      case 1:
+        return <PlanStep/>
+      case 2:
+        return <AddOnsStep/>
+      case 3:
+        return <SummaryStep/>
+      case 4:
+        return <ThankStep/>
     }
   }
-  
+
   return (
     <main>
       {/* Container */}
@@ -31,12 +38,8 @@ const Home = () => {
         <Steps/>
         {/* content */}
         <div className={style.content}>
-            {/* <PersonalInfoStep/> */}
-            <PlanStep/>
-            {/* <AddOnsStep/> */}
-            {/* <SummaryStep/> */}
-            {/* <ThankStep/> */}
-            <NavigateButton/>
+          {stepDisplay}          
+          {currentStep !=4 && <NavigateButton/>}
         </div>
       </div>
     </main>
