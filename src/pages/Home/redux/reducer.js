@@ -1,5 +1,5 @@
 import { produce } from "immer";
-import { SET_STEP } from "./constant";
+import { SET_STEP } from "./constants";
 
 export const initialState = {
     step: 0
