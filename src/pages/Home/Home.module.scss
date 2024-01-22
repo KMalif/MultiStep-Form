@@ -1,0 +1,19 @@
+@import './Home.module.scss';
+
+.Container {
+    min-width: 940px;
+    height: 600px;
+    background-color: hsl(0, 0%, 100%);
+    margin: auto;
+    padding: 16px 15px 15px 15px;
+    border-radius: 1rem;
+    display: flex;
+    box-shadow: 0 5px 10px #d6d9e6;
+  }
+  .content {
+    min-width: 55%;
+    margin: auto;
+    height: 100%;
+    position: relative;
+    padding-top: 30px;
+}
