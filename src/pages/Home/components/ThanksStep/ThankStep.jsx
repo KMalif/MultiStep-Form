@@ -1,5 +1,5 @@
 import React from 'react'
-import thankyou from '../../assets/images/icon-thank-you.svg'
+import thankyou from '../../../../assets/images/icon-thank-you.svg'
 
 const ThankStep = () => {
   return (

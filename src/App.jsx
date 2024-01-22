@@ -1,18 +1,17 @@
-import Steps from "./components/Steps/Steps"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+
+import Home from "./pages/Home"
+
+import './index.scss'
 
 function App() {
 
   return (
-    <main>
-      {/* Container */}
-      <div>
-        <Steps/>
-        {/* content */}
-        <div>
-
-        </div>
-      </div>
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

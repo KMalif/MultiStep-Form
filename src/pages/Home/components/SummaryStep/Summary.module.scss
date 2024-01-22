@@ -1,0 +1,56 @@
+@import '../../../../styles/base.scss';
+
+.payout{
+    padding: 20px 25px;
+    background-color: #eef5ff;
+    border-radius: 10px;
+    margin-top: 40px;
+    .title{
+      align-items: center;
+      padding-bottom: 25px;
+      border-bottom: hsl(229, 24%, 87%) 1px solid;
+      h3{
+        color: #174a89;
+      }
+      span{
+        color: #174a89;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      p{
+        text-decoration: underline;
+        font-size: 14px;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+  .addFinish{
+    padding-top: 20px;
+    p{
+      font-weight: 400;
+      
+    }
+      span{
+        color: #174a89;
+      }
+  }
+  .total{
+    padding: 20px 25px;
+    p{
+      font-weight: 400;
+      font-size: 15px;
+    }
+    span{
+    color: $blue;
+    font-weight: 700;
+    font-size: 20px;
+    }
+}
+
+.dflex {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 500;
+}
