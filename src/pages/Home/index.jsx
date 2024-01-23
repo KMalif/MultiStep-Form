@@ -7,13 +7,12 @@ import PlanStep from './components/SelectPlanStep/PlanStep'
 import NavigateButton from './components/Navigation/NavigateButton'
 import AddOnsStep from './components/AddOnsStep/AddOnsStep'
 import SummaryStep from './components/SummaryStep/SummaryStep'
-import {setStep} from '../Home/redux/action'
+
 
 import style from './Home.module.scss'
 import { useDispatch, useSelector } from 'react-redux'
 
 const Home = () => {
-  const dispatch = useDispatch()
   const currentStep = useSelector((state) => state.homeReducer.step)
 
   const stepDisplay = () => {
@@ -28,17 +27,17 @@ const Home = () => {
         return <SummaryStep/>
       case 4:
         return <ThankStep/>
+      default:
+        return <PersonalInfoStep/>
     }
   }
 
   return (
     <main>
-      {/* Container */}
       <div className={style.Container}>
         <Steps/>
-        {/* content */}
         <div className={style.content}>
-          {stepDisplay}          
+          {stepDisplay()}          
           {currentStep !=4 && <NavigateButton/>}
         </div>
       </div>

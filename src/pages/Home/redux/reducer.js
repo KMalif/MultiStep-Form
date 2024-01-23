@@ -10,6 +10,10 @@ const homeReducer = (state = initialState, action) =>
         switch(action.type) {
             case SET_STEP:
                 draft.step = action.step
+                break;
+            
+            default:
+                break;
         }
     })
 

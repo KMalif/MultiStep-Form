@@ -1,9 +1,9 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
-import {setStep} from '../../redux/reducer'
+import {setStep} from '../../redux/action'
 
 import style from './NavigateButton.module.scss'
-import { useDispatch, useSelector } from 'react-redux'
 
 const NavigateButton = () => {
 
