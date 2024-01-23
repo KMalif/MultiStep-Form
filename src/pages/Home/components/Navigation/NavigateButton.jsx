@@ -19,17 +19,17 @@ const NavigateButton = () => {
   }
 
   const backStepHanlder = () => {
-    if (currentStep === 5) {
-      dispatch(setStep(1))
+    if (currentStep === 0) {
+      dispatch(setStep(0))
     } else {
       dispatch(setStep(currentStep - 1))
     }
   }
 
   return (
-    <div className={`${style.navigation}`}>
-        <button onClick={backStepHanlder} className={style.btn1}>Go Back</button>
-        <button onClick={nextStepHanlder} className={style.btn2}>Next Step</button>
+    <div className={currentStep === 0 ? `${style.navigation} ${style.btnRight}` : style.navigation}>
+      {currentStep !== 0 && <button onClick={backStepHanlder} className={style.btn1}>Go Back</button>}
+      <button onClick={nextStepHanlder} className={style.btn2}>Next Step</button>
     </div>
   )
 }
