@@ -1,12 +1,10 @@
 import React from 'react'
-import { useEffect } from 'react';
-import { useRef } from 'react';
-import { useState } from 'react';
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useRef, useState } from 'react'
+import { useDispatch, useSelector } from "react-redux"
 
-import {setUser} from '../../redux/action';
+import {setUser} from '../../redux/action'
 
-import style from './PersonalInfo.module.scss';
+import style from './PersonalInfo.module.scss'
 
 const PersonalInfoStep = () => {
 

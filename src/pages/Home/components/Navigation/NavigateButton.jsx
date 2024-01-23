@@ -12,11 +12,12 @@ const NavigateButton = () => {
 
   const nextStepHanlder = () => {
     dispatch(setUser({...user, nextClick: true}))
-    if(user.emailValid && user.phoneValid && user.name.length>2 && currentStep===0){
+    if(user.emailValid && user.phoneValid && user.name.length>2 && currentStep === 0){
       dispatch(setStep(currentStep + 1))
       dispatch(setUser({...user, nextClick: false}))
-    }else if(currentStep === 5){
-      dispatch(setStep(0))
+    }
+    if(currentStep !== 0){
+      dispatch(setStep(currentStep + 1))
     }
   }
 

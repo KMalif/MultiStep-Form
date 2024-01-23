@@ -104,7 +104,7 @@ const PlanStep = () => {
                 />
             </div>
         </div>
-        <label for="plan" className={style.switch}>
+        <label className={style.switch}>
             <span className={!switchOff ? `${style.switchOn}` : ''}>Monthly</span>
             <input 
                 id="plan" 
