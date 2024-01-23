@@ -1,20 +1,22 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import {setStep} from '../../redux/action'
+import {setStep, setUser} from '../../redux/action'
 
 import style from './NavigateButton.module.scss'
 
 const NavigateButton = () => {
-
   const dispatch = useDispatch()
   const currentStep = useSelector((state) => state.homeReducer.step)
+  const user = useSelector((state) => state.homeReducer.user)
 
   const nextStepHanlder = () => {
-    if (currentStep === 5) {
-      dispatch(setStep(1))
-    } else {
+    dispatch(setUser({...user, nextClick: true}))
+    if(user.emailValid && user.phoneValid && user.name.length>2 && currentStep===0){
       dispatch(setStep(currentStep + 1))
+      dispatch(setUser({...user, nextClick: false}))
+    }else if(currentStep === 5){
+      dispatch(setStep(0))
     }
   }
 
